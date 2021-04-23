@@ -10,3 +10,5 @@ dbURI = "mongodb+srv://admin:admin@nodetut.4yiwl.mongodb.net/todo?retryWrites=tr
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => app.listen(3000))
 .catch((err) => err)
+
+app.use(morgan('dev'));
